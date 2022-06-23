@@ -66,6 +66,17 @@ const TodoManager = {
 			completed: false,
 		},
 	],
+	getBarData: ({ state: { todoList }}) => {
+		const completedTodos = todoList.filter(TodoManager.filters.completed);
+		const activeTodos = todoList.filter(TodoManager.filters.active);
+
+		return [
+			{ todos: 'completed',
+				number: completedTodos.length },
+			{ todos: 'active',
+				number: activeTodos.length },
+		];
+	},
 
 };
 
