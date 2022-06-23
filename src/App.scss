@@ -11,15 +11,13 @@
 		width: 100%;
 	}
 	.leftDiv {
-		width: 50%;
+		width: 60%;
 		height: 650px;
 		float: left;
-		background: rgb(162, 228, 162);
 	}
 	.rightDiv {
-		margin-left: 50%;
+		margin-left: 30%;
 		height: 650px;
-		background: rgb(163, 163, 230);
 	}
 	.input {
 		padding: 5px;
@@ -36,7 +34,7 @@
     color: rgb(21, 1, 92);
 	}
 	.taskPane {
-		padding-left: 80px;
+		padding-left: 50%;
 		text-align: left;
 	}
 	.filter{
