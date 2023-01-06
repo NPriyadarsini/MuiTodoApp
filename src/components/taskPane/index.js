@@ -1,10 +1,11 @@
+import { Grid, Box } from '@mui/material';
 import { React } from 'react';
 import TaskList from './taskList';
 
 const TaskPane = (context) =>
-	<div className="taskPane" role="TaskPane">
-		<h4>Tasks</h4>
-		<span>{TaskList(context)}</span>
-	</div>;
+	<Grid className="taskPane" role="TaskPane">
+		<Box span={ true }>Tasks</Box>
+		<Box div={ true } className="taskList">{TaskList(context)}</Box>
+	</Grid>;
 
 export default TaskPane;

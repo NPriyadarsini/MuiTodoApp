@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import { React } from 'react';
 import Task from './task.js';
 
@@ -6,8 +7,9 @@ const TaskList = (context) => {
 
 	return (
 
-		<div role="TaskList">
-			{ taskList.map((task) => Task({ ...context, data: task })) } </div>
+		<Grid role="TaskList">
+			{ taskList.map((task) => Task({ ...context, data: task })) }
+		</Grid>
 	);
 };
 

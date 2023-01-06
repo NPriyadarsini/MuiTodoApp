@@ -4,25 +4,25 @@ import TaskPane from './components/taskPane';
 import TodoPane from './components/todoPane';
 import TaskManager from './services/taskManager.js';
 import Ticker from './services/ticker';
-import BarChart from './components/todoPane/barChart';
-import BarData from './components/todoPane/barData';
+import { Box, Paper } from '@mui/material';
 
+// eslint-disable-next-line max-lines-per-function
 const App = (context) => {
 	useEffect(() => TaskManager.init(context), []);
 	useEffect(() => Ticker.start(context), []);
 
-	const barData = {
-		values: BarData(context),
-	};
-
-	return <div className="App" role="App">
-		<div className="mainDiv">
-			<div className="leftDiv"><b>TodoPane</b>{TodoPane(context)}
-				<span><BarChart data={ barData }/></span>
-			</div>
-			<div className="rightDiv"><b>TaskPane</b>{TaskPane(context)}</div>
-		</div>
-	</div>;
+	return <Box className="App" role="App">
+		<Paper
+			elevation={ 5 }
+			className="panel"
+		>TodoPane{TodoPane(context)}
+		</Paper>
+		<Paper
+			elevation={ 5 }
+			className="panel margin"
+		>TaskPane{TaskPane(context)}
+		</Paper>
+	</Box>;
 };
 
 export default App;
