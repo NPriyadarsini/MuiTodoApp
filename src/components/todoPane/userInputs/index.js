@@ -2,17 +2,18 @@ import { React } from 'react';
 import Input from './input.js';
 import FilterBar from './filterBar.js';
 import ActionButton from './actionButton';
+import { Box, Grid } from '@mui/material';
 
 const UserInputs = (context) =>
-	<div className="userInputs" role="userInputs">
-		<div>
-			{Input(context)}
-			{ActionButton(context)}
-		</div>
-		<div><br/>
-			{FilterBar(context)}
-		</div>
+	<Box className="userInputs" role="userInputs">
+		<Grid>
+			<Input { ...context }/>
+			<ActionButton { ...context }/>
+		</Grid>
+		<Grid>
+			<FilterBar { ...context }/>
+		</Grid>
 		<br/>
-	</div>;
+	</Box>;
 
 export default UserInputs;
