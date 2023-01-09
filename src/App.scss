@@ -26,6 +26,9 @@
 	.button {
 		padding: 5px;
 	}
+	.actionButton{
+		margin-top: -30px;
+	}
 	.todo{
 		font-weight: lighter;
 		font-size: medium;
@@ -44,8 +47,7 @@
 	}
 
 	.filter{
-	  float: left;
-		padding-left:40px;
+		margin-left: -40%;
 	}
 
 }
