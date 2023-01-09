@@ -1,10 +1,10 @@
 import { React, useEffect } from 'react';
 import './App.scss';
-import TaskPane from './components/taskPane';
-import TodoPane from './components/todoPane';
 import TaskManager from './services/taskManager.js';
 import Ticker from './services/ticker';
-import { Box, Paper } from '@mui/material';
+import { Box } from '@mui/material';
+import TodoPaneFrame from './components/TodoPaneFrame';
+import TaskPaneFrame from './components/TaskPaneFrame';
 
 // eslint-disable-next-line max-lines-per-function
 const App = (context) => {
@@ -12,16 +12,8 @@ const App = (context) => {
 	useEffect(() => Ticker.start(context), []);
 
 	return <Box className="App" role="App">
-		<Paper
-			elevation={ 5 }
-			className="panel"
-		>TodoPane{TodoPane(context)}
-		</Paper>
-		<Paper
-			elevation={ 5 }
-			className="panel margin"
-		>TaskPane{TaskPane(context)}
-		</Paper>
+		<TodoPaneFrame { ...context }/>
+		<TaskPaneFrame { ...context }/>
 	</Box>;
 };
 
