@@ -5,7 +5,7 @@ import ActionButton from './actionButton';
 
 const UserInputs = (context) =>
 	<div className="userInputs" role="userInputs">
-		<div className="input">
+		<div>
 			{Input(context)}
 			{ActionButton(context)}
 		</div>
