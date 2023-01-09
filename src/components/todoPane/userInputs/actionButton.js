@@ -1,8 +1,9 @@
-import addButton from './addButton.js';
-import editButton from './editButton.js';
+import { React } from 'react';
+import AddButton from './addButton';
+import EditButton from './editButton';
 
 const actionButton = (context) => (context.state.editing
-	? editButton(context)
-	: addButton(context));
+	? <EditButton { ...context }/>
+	: <AddButton { ...context }/>);
 
 export default actionButton;

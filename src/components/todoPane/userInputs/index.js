@@ -13,7 +13,6 @@ const UserInputs = (context) =>
 		<Grid>
 			<FilterBar { ...context }/>
 		</Grid>
-		<br/>
 	</Box>;
 
 export default UserInputs;

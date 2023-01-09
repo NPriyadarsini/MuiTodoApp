@@ -1,11 +1,13 @@
+import { Button } from '@mui/material';
 import { React } from 'react';
 
 const AddButton = (context) =>
-	<button
+	<Button
 		role="addButton"
+		className="actionButton"
+		variant="outlined"
+		color="inherit"
 		onClick={ () => context.actions.addTodo() }
-	>
-		Add
-	</button>;
+	>ADD</Button>;
 
 export default AddButton;

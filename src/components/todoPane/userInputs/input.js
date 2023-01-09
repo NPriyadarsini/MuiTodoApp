@@ -1,3 +1,4 @@
+import { TextareaAutosize } from '@mui/material';
 import { React } from 'react';
 
 const getEnterKeyAction = (context) =>
@@ -11,19 +12,21 @@ const Input = (context) => {
 	const { state } = context;
 
 	return (
-		<label>Enter the Task:{}
-			<input
-				id="input"
-				role="input"
-				type="text"
-				value={ state.input }
-				onChange={ (evt) =>
-					context.actions.setInput(evt.target.value) }
-				onKeyUp={ (evt) => {
-					actionKeys[evt.code] && actionKeys[evt.code](context);
-				} }
-			/>
-		</label>);
+
+		<TextareaAutosize
+			placeholder="Enter The Task"
+			minRows={ 2 }
+			variant="standard"
+			role="input"
+			type="text"
+			value={ state.input }
+			onChange={ (evt) =>
+				context.actions.setInput(evt.target.value) }
+			onKeyUp={ (evt) => {
+				actionKeys[evt.code] && actionKeys[evt.code](context);
+			} }
+		/>
+	);
 };
 
 export default Input;
