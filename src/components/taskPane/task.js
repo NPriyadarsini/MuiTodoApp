@@ -7,11 +7,11 @@ const Task = (context) => {
 	const { data: { id, todo }} = context;
 
 	return	<Grid key={ id } container={ true }	role="Task">
-		<Grid item={ true } xs={ 1 } className="button">
+		<Grid item={ true } xs={ 1.5 } className="button">
 			<AddButton { ...context }/>
 		</Grid>
 		<Grid item={ true } xs={ 4 }>{ todo }</Grid>
-		<Grid item={ true } xs={ 1 } className="button">
+		<Grid item={ true } xs={ 1.5 } className="button">
 			<RemoveButton { ...context }/>
 		</Grid>
 	</Grid>;
