@@ -1,3 +1,4 @@
+import { Checkbox } from '@mui/material';
 import { React } from 'react';
 
 const CheckBox = (context) => {
@@ -5,10 +6,12 @@ const CheckBox = (context) => {
 	const { completed } = data;
 
 	return (
-		<input
+		<Checkbox
 			role="toggleTodo"
 			type="checkbox"
+			size="small"
 			checked={ completed }
+			sx={ { color: 'inherit', top: '-10px' } }
 			onChange={ () => context.actions.toggleTodo(data) }
 		/>);
 };

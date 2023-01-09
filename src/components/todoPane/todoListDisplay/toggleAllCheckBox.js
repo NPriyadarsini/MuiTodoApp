@@ -1,3 +1,4 @@
+import { Checkbox } from '@mui/material';
 import { React } from 'react';
 import TodoManager from '../../../services/todoManager';
 
@@ -7,11 +8,12 @@ const ToggleAllCheckBox = (context) => {
 	const noTodos = TodoManager.hasNoTodos(context);
 
 	return (
-		<input
+		<Checkbox
 			role="toggleAllCheckBox"
 			disabled={ noTodos }
 			type="checkbox"
 			checked={ selectAll }
+			sx={ { color: 'inherit' } }
 			onChange={ () => actions.toggleTodoList(!selectAll) }
 		/>
 	);

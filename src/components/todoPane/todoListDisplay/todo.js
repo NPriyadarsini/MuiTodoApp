@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import { React } from 'react';
 import RemoveButton from './removeButton';
 import TodoCheckBox from './todoCheckBox';
@@ -7,14 +8,20 @@ const Todo = (context) => {
 	const { id, todo } = data;
 
 	return (
-		<div key={ id } className="todo" role="todo">
-			<span>{TodoCheckBox(context)}</span>
-			<span
+		<Grid key={ id } container={ true } className="todo" role="todo">
+			<Grid item={ true } xs={ 0.8 }><TodoCheckBox { ...context }/>
+			</Grid>
+			<Grid
+				item={ true }
+				xs={ 4 }
+				sx={ { textAlign: 'left' } }
 				role="setEditing"
 				onClick={ () => actions.setEditing(data) }
-			>{todo}</span>
-			<span>{RemoveButton(context)}</span>
-		</div>
+			>{todo}
+			</Grid>
+			<Grid item={ true } xs={ 1.5 }><RemoveButton { ...context }/>
+			</Grid>
+		</Grid>
 	);
 };
 

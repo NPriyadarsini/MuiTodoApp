@@ -2,17 +2,20 @@ import { React } from 'react';
 import TodoList from './todoList.js';
 import ToggleAllCheckBox from './toggleAllCheckBox.js';
 import ClearCompleted from './clearCompleted';
+import { Box, Grid } from '@mui/material';
 
 const TodoListDisplay = (context) =>
-	<div className="todoList" role="TodoListDisplay">
-		<div>{ToggleAllCheckBox(context)}<u>Todo List</u>
-		</div>
-		<div>
+	<Box className="todoList" role="TodoListDisplay">
+		<Grid>
+			<ToggleAllCheckBox { ...context }/>
+			Todo List
+		</Grid>
+		<Grid>
 			{TodoList(context)}
-		</div>
-		<div>
+		</Grid>
+		<Grid>
 			{ClearCompleted(context)}
-		</div>
-	</div>;
+		</Grid>
+	</Box>;
 
 export default TodoListDisplay;
