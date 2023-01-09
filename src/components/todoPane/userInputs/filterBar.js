@@ -1,12 +1,19 @@
+import { ButtonGroup } from '@mui/material';
 import { React } from 'react';
 import FilterButton from './filterButton.js';
 
 const FilterBar = (context) => {
 	const { config } = context;
 
-	return	<div role="filterBar" className="filter">
-		{config.filters.map((filter) =>
-			FilterButton({ ...context, data: filter }))}</div>;
+	return	(
+		<ButtonGroup
+			role="filterBar"
+			className="filter"
+		>
+			{config.filters.map((filter) =>
+				FilterButton({ ...context, data: filter }))}
+		</ButtonGroup>
+	);
 };
 
 export default FilterBar;
