@@ -1,5 +1,6 @@
 import Todo from './todo';
 import TodoManager from '../../../services/todoManager';
+import { React } from 'react';
 
 const TodoList = (context) => {
 	const { state } = context;
@@ -11,7 +12,8 @@ const TodoList = (context) => {
 
 	return noTodos
 		? []
-		: filteredTodo.map((todo) => Todo({ ...context, data: todo }));
+		: filteredTodo.map((todo, id) =>
+			<Todo key={ id }{ ...{ ...context, data: todo } }/>);
 };
 
 export default TodoList;

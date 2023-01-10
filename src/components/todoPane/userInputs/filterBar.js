@@ -9,9 +9,15 @@ const FilterBar = (context) => {
 		<ButtonGroup
 			role="filterBar"
 			className="filter"
+			size="small"
 		>
-			{config.filters.map((filter) =>
-				FilterButton({ ...context, data: filter }))}
+			{
+				config.filters.map((filter, id) =>
+					<FilterButton
+						key={ id }
+						{ ...{ ...context, data: filter } }
+					/>)
+			}
 		</ButtonGroup>
 	);
 };

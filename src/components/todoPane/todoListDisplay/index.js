@@ -11,10 +11,10 @@ const TodoListDisplay = (context) =>
 			Todo List
 		</Grid>
 		<Grid>
-			{TodoList(context)}
+			<TodoList { ...context }/>
 		</Grid>
 		<Grid>
-			{ClearCompleted(context)}
+			<ClearCompleted { ...context }/>
 		</Grid>
 	</Box>;
 
