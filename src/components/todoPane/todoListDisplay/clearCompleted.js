@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import { React } from 'react';
 import TodoManager from '../../../services/todoManager';
 
@@ -5,12 +6,14 @@ const clearCompleted = (context) => {
 	const hasCompletedTodo = TodoManager.hasCompletedTodo(context);
 
 	return (
-		<button
+		<Button
 			role="clearCompleted"
+			variant="outlined"
+			color="inherit"
 			disabled={ !hasCompletedTodo }
 			onClick={ () =>	context.actions.getClearCompleted() }
 		>Clear Completed
-		</button>
+		</Button>
 	);
 };
 
