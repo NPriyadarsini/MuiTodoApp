@@ -11,7 +11,13 @@ const CheckBox = (context) => {
 			type="checkbox"
 			size="small"
 			checked={ completed }
-			sx={ { color: 'inherit', top: '-10px' } }
+			sx={ {
+				'color': 'inherit',
+				'&.Mui-checked': {
+					color: 'inherit',
+				},
+				'top': '-10px',
+			} }
 			onChange={ () => context.actions.toggleTodo(data) }
 		/>);
 };

@@ -13,7 +13,12 @@ const ToggleAllCheckBox = (context) => {
 			disabled={ noTodos }
 			type="checkbox"
 			checked={ selectAll }
-			sx={ { color: 'inherit' } }
+			sx={ {
+				'color': 'inherit',
+				'&.Mui-checked': {
+					color: 'inherit',
+				},
+			} }
 			onChange={ () => actions.toggleTodoList(!selectAll) }
 		/>
 	);
