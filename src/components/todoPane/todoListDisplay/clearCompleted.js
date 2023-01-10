@@ -10,6 +10,7 @@ const clearCompleted = (context) => {
 			role="clearCompleted"
 			variant="outlined"
 			color="inherit"
+			size="small"
 			disabled={ !hasCompletedTodo }
 			onClick={ () =>	context.actions.getClearCompleted() }
 		>Clear Completed

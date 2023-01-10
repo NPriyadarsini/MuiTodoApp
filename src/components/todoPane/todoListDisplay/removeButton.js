@@ -11,7 +11,9 @@ const RemoveButton = (context) => {
 			role="removeButton"
 			color="inherit"
 			onClick={ () => actions.removeTodo(data) }
-		><RemoveCircle fontSize="small"/></Button>
+		>
+			<RemoveCircle fontSize="small"/>
+		</Button>
 	);
 };
 
