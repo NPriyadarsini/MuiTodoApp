@@ -7,7 +7,7 @@ const TaskList = (context) => {
 
 	return (
 
-		<Grid role="TaskList">
+		<Grid role="TaskList" className="taskList">
 			{
 				taskList.map((task, id) =>
 					<Task key={ id }{ ...{ ...context, data: task } }/>)

@@ -6,6 +6,7 @@ const ToggleAllCheckBox = (context) => {
 	const { actions } = context;
 	const selectAll = TodoManager.isAllChecked(context);
 	const noTodos = TodoManager.hasNoTodos(context);
+	const color = noTodos ? 'default' : 'inherit';
 
 	return (
 		<Checkbox
@@ -13,12 +14,10 @@ const ToggleAllCheckBox = (context) => {
 			disabled={ noTodos }
 			type="checkbox"
 			checked={ selectAll }
-			sx={ {
-				'color': 'inherit',
+			sx={ { 'color': { color },
 				'&.Mui-checked': {
-					color: 'inherit',
-				},
-			} }
+					color: { color },
+				}} }
 			onChange={ () => actions.toggleTodoList(!selectAll) }
 		/>
 	);

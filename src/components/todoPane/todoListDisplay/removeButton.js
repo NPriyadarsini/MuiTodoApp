@@ -1,4 +1,4 @@
-import { RemoveCircle } from '@mui/icons-material';
+import { Delete } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import { React } from 'react';
 
@@ -12,7 +12,7 @@ const RemoveButton = (context) => {
 			color="inherit"
 			onClick={ () => actions.removeTodo(data) }
 		>
-			<RemoveCircle fontSize="small"/>
+			<Delete fontSize="small"/>
 		</Button>
 	);
 };

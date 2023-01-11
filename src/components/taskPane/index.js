@@ -4,7 +4,7 @@ import TaskList from './taskList';
 
 const TaskPane = (context) =>
 	<Grid className="taskPane" role="TaskPane">
-		<Box>Tasks</Box>
+		<Box className="heading">Tasks</Box>
 		<Box className="taskList">
 			<TaskList { ...context }/>
 		</Box>

@@ -6,7 +6,7 @@ import RemoveButton from './removeButton';
 const Task = (context) => {
 	const { data: { id, todo }} = context;
 
-	return	<Grid key={ id } container={ true }	role="Task">
+	return	<Grid key={ id } container={ true }	role="Task" className="task">
 		<Grid item={ true } xs={ 1.5 } className="button">
 			<AddButton { ...context }/>
 		</Grid>
