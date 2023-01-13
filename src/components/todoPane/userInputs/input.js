@@ -1,4 +1,4 @@
-import { TextareaAutosize } from '@mui/material';
+import { TextField } from '@mui/material';
 import { React } from 'react';
 
 const getEnterKeyAction = (context) =>
@@ -8,15 +8,36 @@ const actionKeys = {
 	Enter: (context) => context.actions[getEnterKeyAction(context)](context),
 	Escape: (context) => context.actions.setInput(''),
 };
+const inputStyle = {
+	'& label.Mui-focused': {
+		color: 'white',
+	},
+	'& .MuiInput-underline:after': {
+		borderBottomColor: 'white',
+	},
+	'& .MuiOutlinedInput-root': {
+		'& fieldset': {
+			borderColor: 'white',
+		},
+		'&:hover fieldset': {
+			borderColor: 'white',
+		},
+		'&.Mui-focused fieldset': {
+			borderColor: 'white',
+		},
+	},
+};
+
 const Input = (context) => {
 	const { state } = context;
 
 	return (
-
-		<TextareaAutosize
+		<TextField
 			placeholder="Enter The Task"
-			minRows={ 2 }
-			variant="standard"
+			variant="outlined"
+			sx={ inputStyle }
+			shrink={ true }
+			size="small"
 			role="input"
 			type="text"
 			value={ state.input }

@@ -7,6 +7,7 @@ const AddButton = (context) =>
 		className="actionButton"
 		variant="outlined"
 		color="inherit"
+		size="large"
 		onClick={ () => context.actions.addTodo() }
 	>ADD</Button>;
 

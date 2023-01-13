@@ -8,9 +8,6 @@ const TodoListDisplay = (context) =>
 	<Box className="todoList" role="TodoListDisplay">
 		<Grid>
 			<ToggleAllCheckBox { ...context }/>
-			Todo List
-		</Grid>
-		<Grid>
 			<TodoList { ...context }/>
 		</Grid>
 		<Grid>

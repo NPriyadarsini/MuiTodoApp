@@ -26,37 +26,47 @@
 	.button {
 		padding: 5px;
 	}
-	.actionButton{
-		margin-top: -30px;
-	}
-	.todo{
-		font-weight: lighter;
-		font-size: medium;
-	}
+
 	.todoList {
-		padding-left: 50px;
-		text-align: left;
 		font-weight: bold;
 		font-size: medium;
 	}
-	.taskPane {
-		margin-left: 5%;
+
+	.toggleAll{
+		display: flex;
+		justify-content: center;
 		text-align: left;
+		margin-top: 2%;
+	}
+	.todo{
+		display: flex;
+		justify-content: center;
 		font-weight: lighter;
 		font-size: medium;
 	}
+	.taskPane {
+		text-align: center;
+		font-weight: lighter;
+		font-size: medium;
+	}
+	.task{
+		display: flex;
+		justify-content: center;
+		text-align: left;
+	}
 	.heading {
-		margin-left: 20%;
 		margin-bottom: 3%;
 		font-weight: bold;
 		font-size: medium;
 	}
 
 	.filter{
-		margin-left: -50%;
+		margin-top: 1%;
 	}
 	.iconButton{
 		margin-top: -10px;
 	}
-
+	input{
+		color: #fff;
+	}
 }

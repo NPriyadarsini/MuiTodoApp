@@ -9,18 +9,15 @@ const Todo = (context) => {
 
 	return (
 		<Grid key={ id } container={ true } className="todo" role="todo">
-			<Grid item={ true } xs={ 0.8 }><TodoCheckBox { ...context }/>
-			</Grid>
+			<TodoCheckBox { ...context }/>
 			<Grid
-				item={ true }
 				xs={ 4 }
-				sx={ { textAlign: 'left' } }
+				sx={ { 'textAlign': 'left', 'margin-left': '3px' } }
 				role="setEditing"
 				onClick={ () => actions.setEditing(data) }
 			>{todo}
 			</Grid>
-			<Grid item={ true } xs={ 1.5 }><RemoveButton { ...context }/>
-			</Grid>
+			<RemoveButton { ...context }/>
 		</Grid>
 	);
 };
