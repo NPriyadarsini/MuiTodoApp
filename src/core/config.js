@@ -3,6 +3,10 @@ const seconds = 2;
 
 const config = {
 	idLength: 4,
+	tabs: [
+		{ key: 'TodoPane', title: 'TodoPane' },
+		{ key: 'TaskPane', title: 'TaskPane' },
+	],
 	filters: [{ label: 'ALL',
 		name: 'all' },
 	{ label: 'ACTIVE',

@@ -1,5 +1,6 @@
 
 const seed = {
+	index: 0,
 	input: '',
 	todo: '',
 	todoList: [],
